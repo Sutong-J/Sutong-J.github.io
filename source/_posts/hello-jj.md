@@ -40,4 +40,4 @@ npx hexo new "文章标题"
 
 ---
 
-*time will tell*
+*自洽*

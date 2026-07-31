@@ -32,7 +32,7 @@ subtitle:
     loop: true
   source: false
   sub:
-    - time will tell
+    - 自洽
     - 静下心来，写一点技术与思考
 
 # Disable default top banner for a cleaner dark look

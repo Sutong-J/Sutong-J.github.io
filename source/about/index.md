@@ -13,4 +13,4 @@ type: "about"
 - GitHub：（把链接换成你的）
 - Email：（可选）
 
-> time will tell
+> 自洽
