@@ -1,0 +1,7 @@
+name = "jj-blog-oauth"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# 部署后用下面命令设置密钥：
+# npx wrangler secret put GITHUB_CLIENT_ID
+# npx wrangler secret put GITHUB_CLIENT_SECRET

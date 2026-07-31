@@ -1,0 +1,61 @@
+# JJ Blog 在线写作后台配置
+# 访问：https://sutong-j.github.io/admin/
+#
+# 首次使用前请完成 OAuth（见 ADMIN.md）：
+# 1. 创建 GitHub OAuth App
+# 2. 部署 oauth-worker
+# 3. 把下面的 base_url 改成你的 Worker 地址
+
+backend:
+  name: github
+  repo: Sutong-J/Sutong-J.github.io
+  branch: main
+  # 部署 OAuth Worker 后填写，例如：https://jj-blog-oauth.yourname.workers.dev
+  base_url: https://REPLACE_WITH_YOUR_OAUTH_WORKER.workers.dev
+  auth_endpoint: auth
+
+local_backend: false
+
+# 上传的图片会写到仓库 source/img，站点访问路径 /img/...
+media_folder: source/img
+public_folder: /img
+
+locale: zh_Hans
+
+slug:
+  encoding: unicode
+  clean_accents: false
+  sanitize_replacement: '-'
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: source/_posts
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    extension: md
+    format: frontmatter
+    editor:
+      preview: true
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: 发布日期, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: 'YYYY-MM-DD', time_format: 'HH:mm:ss' }
+      - { label: 更新日期, name: updated, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', date_format: 'YYYY-MM-DD', time_format: 'HH:mm:ss', required: false }
+      - { label: 标签, name: tags, widget: list, required: false, default: [] }
+      - { label: 分类, name: categories, widget: list, required: false, default: [] }
+      - { label: 正文, name: body, widget: markdown }
+
+  - name: pages
+    label: 页面
+    label_singular: 页面
+    files:
+      - name: about
+        label: 关于
+        file: source/about/index.md
+        fields:
+          - { label: 标题, name: title, widget: string }
+          - { label: 日期, name: date, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss', required: false }
+          - { label: type, name: type, widget: hidden, default: about }
+          - { label: 正文, name: body, widget: markdown }
