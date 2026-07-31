@@ -1,0 +1,35 @@
+/* JJ blog custom overrides - dark polish */
+:root {
+  --jj-accent: #7dd3fc;
+}
+
+body {
+  letter-spacing: 0.01em;
+}
+
+#page-header {
+  background: linear-gradient(160deg, #0b1220 0%, #111827 45%, #1e293b 100%) !important;
+}
+
+#site-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+#site-subtitle {
+  opacity: 0.85;
+}
+
+.layout > div:first-child .recent-post-item {
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+#aside-content .card-widget {
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+a:hover {
+  color: var(--jj-accent);
+}

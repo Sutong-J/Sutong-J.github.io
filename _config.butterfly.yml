@@ -1,0 +1,206 @@
+# Butterfly theme config for JJ blog (dark + comments)
+
+# --------------------------------------
+# Basic
+# --------------------------------------
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-heart
+
+# Dark mode by default (like skippy.uno vibe)
+display_mode: dark
+# false = follow system; dark = always dark; light = always light
+
+favicon: /img/favicon.png
+
+avatar:
+  img: https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg
+  effect: false
+
+# --------------------------------------
+# Header / subtitle
+# --------------------------------------
+subtitle:
+  enable: true
+  effect: true
+  typed_option:
+    stringsElement: '#subtitle-strings'
+    typeSpeed: 60
+    backSpeed: 40
+    loop: true
+  source: false
+  sub:
+    - time will tell
+    - 静下心来，写一点技术与思考
+
+# Disable default top banner for a cleaner dark look
+default_top_img: false
+index_img:
+archive_img:
+tag_img:
+tag_per_img:
+category_img:
+category_per_img:
+
+# --------------------------------------
+# Aside / site info
+# --------------------------------------
+aside:
+  enable: true
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: JJ 的技术笔记
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/
+  card_announcement:
+    enable: true
+    content: 深色技术博客 · 欢迎留言
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order: ''
+  card_newest_comments:
+    enable: false
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order: ''
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    orderby: random
+    order: 1
+    sort_order: ''
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order: ''
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order: ''
+    runtime_enable: false
+
+# --------------------------------------
+# Post
+# --------------------------------------
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+copyright:
+  enable: true
+  decode: false
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# --------------------------------------
+# Comments: Giscus (GitHub Discussions)
+# Fill in repo / repo_id / category_id after setup:
+# https://giscus.app
+# --------------------------------------
+comments:
+  use: giscus
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false
+
+giscus:
+  repo: # 例如: yourname/jj-blog
+  repo_id: # 在 giscus.app 生成
+  category: Announcements
+  category_id: # 在 giscus.app 生成
+  theme:
+    light: light
+    dark: dark
+  lang: zh-CN
+  reactions_enabled: 1
+  input_position: bottom
+  loading: lazy
+
+# --------------------------------------
+# Search
+# --------------------------------------
+search:
+  use: local_search
+  placeholder:
+  algolia_search:
+    hits:
+      per_page: 6
+  local_search:
+    preload: false
+    top_n_per_article: 1
+    unescape: false
+    CDN:
+
+# --------------------------------------
+# Footer
+# --------------------------------------
+footer:
+  owner:
+    enable: true
+    since: 2026
+  copyright: true
+  custom_text: Powered by Hexo · Theme Butterfly
+
+# --------------------------------------
+# Inject
+# --------------------------------------
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+
+# --------------------------------------
+# Other
+# --------------------------------------
+lazyload:
+  enable: false
+
+footer_style: 0
+
+rightside_bottom:
+copy:
+  enable: true
+  copyright:
+    enable: false
+
+dont_edit: false
+error_404:
+  enable: true
+  subtitle: '页面走丢了'
+  background: https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg
