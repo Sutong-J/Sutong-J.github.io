@@ -16,7 +16,7 @@ display_mode: dark
 favicon: /img/favicon.png
 
 avatar:
-  img: https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg
+  img: /img/pic.jpg
   effect: false
 
 # --------------------------------------
